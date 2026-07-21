@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artificial Intelligence </title>
+<meta name="description" content="An interactive presentation about Artificial Intelligence: history, types, daily use, pros and cons, facts, and a quiz.">
+
+<!-- Fonts: Space Grotesk for display, Inter for body -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== Progress bar ===== -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ===== Nav dots ===== -->
+<nav class="dot-nav" id="dotNav" aria-label="Section navigation">
+  <a href="#hero" class="dot active" data-label="Home"></a>
+  <a href="#what-is-ai" class="dot" data-label="What is AI"></a>
+  <a href="#history" class="dot" data-label="History"></a>
+  <a href="#types" class="dot" data-label="Types"></a>
+  <a href="#daily-life" class="dot" data-label="Daily Life"></a>
+  <a href="#pros-cons" class="dot" data-label="Pros & Cons"></a>
+  <a href="#facts" class="dot" data-label="Facts"></a>
+  <a href="#quiz" class="dot" data-label="Quiz"></a>
+  <a href="#conclusion" class="dot" data-label="Conclusion"></a>
+</nav>
+
+<!-- ===================================================== -->
+<!-- 1. HERO SECTION -->
+<!-- ===================================================== -->
+<section id="hero" class="hero">
+  <canvas id="neuralCanvas"></canvas>
+  <div class="hero-glow"></div>
+
+  <div class="hero-content fade-in">
+    <span class="eyebrow">English Class Presentation</span>
+    <h1 class="hero-title">
+      Artificial <span class="text-gradient">Intelligence</span>
+    </h1>
+    <p class="hero-subtitle">Developed by Shayan · Presented with Amir</p>
+    <button class="btn-primary" id="startExploring">
+      <span>Start Exploring</span>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 4v16m0 0l-6-6m6 6l6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-hint-line"></div>
+  </div>
+</section>
+
+<!-- ===================================================== -->
+<!-- 2. WHAT IS AI -->
+<!-- ===================================================== -->
+<section id="what-is-ai" class="section">
+  <div class="container two-col">
+    <div class="fade-in">
+      <span class="section-tag">01 — Basics</span>
+      <h2 class="section-title">What is AI?</h2>
+      <p class="lead">Artificial Intelligence, or AI, is when a computer can think and learn like a human.</p>
+      <p class="body-text">
+        AI can analyze information. It can find patterns. Then it can make decisions.
+        It does not get tired. It does not need to sleep. It can learning from data.
+      </p>
+      <p class="body-text">
+        You already use AI every day. Your phone, your maps app, and your music app all use AI.
+        It is not science fiction anymore. It is part of normal life.
+      </p>
+    </div>
+    <div class="fade-in ai-illustration" aria-hidden="true">
+      <svg viewBox="0 0 400 400" class="brain-svg">
+        <defs>
+          <linearGradient id="brainGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#0d9488"/>
+            <stop offset="100%" stop-color="#ffffff"/>
+          </linearGradient>
+        </defs>
+        <g class="brain-pulse">
+          <path d="M200 60c-40 0-70 25-78 60-25 5-45 28-45 55 0 15 6 28 16 38-8 10-13 22-13 35 0 33 27 60 62 60h116c35 0 62-27 62-60 0-13-5-25-13-35 10-10 16-23 16-38 0-27-20-50-45-55-8-35-38-60-78-60z"
+                fill="none" stroke="url(#brainGrad)" stroke-width="2.5"/>
+          <path d="M200 60v248M130 130q40 20 70 0M270 130q-40 20-70 0M110 220q45 25 90 0 45 25 90 0" fill="none" stroke="url(#brainGrad)" stroke-width="1.5" opacity="0.6"/>
+        </g>
+        <g class="brain-nodes">
+          <circle cx="130" cy="130" r="5" fill="#ffffff"/>
+          <circle cx="270" cy="130" r="5" fill="#0d9488"/>
+          <circle cx="110" cy="220" r="5" fill="#0d9488"/>
+          <circle cx="290" cy="220" r="5" fill="#ffffff"/>
+          <circle cx="200" cy="300" r="5" fill="#ffffff"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================== -->
+<!-- 3. HISTORY OF AI — TIMELINE -->
+<!-- ===================================================== -->
+<section id="history" class="section section-alt">
+  <div class="container">
+    <div class="section-head fade-in">
+      <span class="section-tag">02 — Timeline</span>
+      <h2 class="section-title">History of AI</h2>
+      <p class="lead">AI did not appear overnight. It grew step by step, over many years.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-line"><div class="timeline-line-fill" id="timelineFill"></div></div>
+
+      <div class="timeline-item fade-in">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card glass">
+          <span class="timeline-year">1956</span>
+          <h3>Birth of AI</h3>
+          <p>Scientists met at Dartmouth College. They used the words "Artificial Intelligence" for the first time. This meeting started it all.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card glass">
+          <span class="timeline-year">1997</span>
+          <h3>Deep Blue Defeats Kasparov</h3>
+          <p>IBM's computer, Deep Blue, beat the world chess champion, Garry Kasparov. It showed that computers could solve problem and beat humans at games.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card glass">
+          <span class="timeline-year">2011</span>
+          <h3>Siri and Alexa</h3>
+          <p>Voice assistants entered our homes and phones. Suddenly, we could talk to AI and it talked back.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card glass">
+          <span class="timeline-year">2022+</span>
+          <h3>ChatGPT and Modern AI</h3>
+          <p>New AI tools can write, chat, and create images. AI became a tool for everyone, not just scientists.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================== -->
+<!-- 4. TYPES OF AI -->
+<!-- ===================================================== -->
+<section id="types" class="section">
+  <div class="container">
+    <div class="section-head fade-in">
+      <span class="section-tag">03 — Categories</span>
+      <h2 class="section-title">Types of AI</h2>
+      <p class="lead">Not all AI is the same. We can group it into three types.</p>
+    </div>
+
+    <div class="card-grid three-col">
+      <div class="type-card fade-in">
+        <div class="type-card-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.8"/><path d="M8 12h8M12 8v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Narrow AI</h3>
+        <span class="type-badge">Weak AI</span>
+        <p>This AI can do only one job. For example, a chess app or a face filter. Most AI today is Narrow AI.</p>
+      </div>
+
+      <div class="type-card fade-in">
+        <div class="type-card-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 3a9 9 0 010 18" stroke="currentColor" stroke-width="1.8"/></svg>
+        </div>
+        <h3>General AI</h3>
+        <span class="type-badge">Strong AI</span>
+        <p>This AI could do any task a human can do. It could learn new things by itself. It does not exist yet.</p>
+      </div>
+
+      <div class="type-card fade-in">
+        <div class="type-card-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.5 7H21l-6 4.5L17.5 21 12 16.5 6.5 21 9 13.5 3 9h6.5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Super AI</h3>
+        <span class="type-badge">Future AI</span>
+        <p>Nobody Knows.. yet. we will find out in the future</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================== -->
+<!-- 5. AI IN DAILY LIFE -->
+<!-- ===================================================== -->
+<section id="daily-life" class="section section-alt">
+  <div class="container">
+    <div class="section-head fade-in">
+      <span class="section-tag">04 — Everyday Use</span>
+      <h2 class="section-title">AI in Daily Life</h2>
+      <p class="lead">AI is closer than you think. Here is where you meet it every day.</p>
+    </div>
+
+    <div class="card-grid six-col">
+      <div class="mini-card fade-in">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="6" y="2" width="12" height="20" rx="2" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="18" r="0.8" fill="currentColor"/></svg>
+        <h4>Smartphones</h4>
+        <p>Face unlock and smart replies use AI.</p>
+      </div>
+      <div class="mini-card fade-in">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.5-9.5-9C.8 8.2 3 4 7 4c2 0 3.8 1 5 2.5C13.2 5 15 4 17 4c4 0 6.2 4.2 4.5 8-2.5 4.5-9.5 9-9.5 9z" stroke="currentColor" stroke-width="1.6"/></svg>
+        <h4>Healthcare</h4>
+        <p>AI helps doctors find diseases faster.</p>
+      </div>
+      <div class="mini-card fade-in">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M3 13l2-6a2 2 0 012-1h10a2 2 0 012 1l2 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><rect x="2" y="13" width="20" height="6" rx="1.5" stroke="currentColor" stroke-width="1.6"/><circle cx="7" cy="19" r="1.4" fill="currentColor"/><circle cx="17" cy="19" r="1.4" fill="currentColor"/></svg>
+        <h4>Self-Driving Cars</h4>
+        <p>AI helps cars see the road and drive.</p>
+      </div>
+      <div class="mini-card fade-in">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 3l9 4.5v9L12 21l-9-4.5v-9L12 3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M12 3v18M3 7.5l9 4.5 9-4.5" stroke="currentColor" stroke-width="1.6"/></svg>
+        <h4>Education</h4>
+        <p>AI creates lessons made just for you.</p>
+      </div>
+      <div class="mini-card fade-in">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="2" y="4" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 10h.01M12 10h.01M16 10h.01" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+        <h4>Gaming</h4>
+        <p>AI controls characters and builds worlds.</p>
+      </div>
+      <div class="mini-card fade-in">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M6 6h15l-1.5 9h-12z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M6 6L5 3H2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9.5" cy="19.5" r="1.3" fill="currentColor"/><circle cx="17.5" cy="19.5" r="1.3" fill="currentColor"/></svg>
+        <h4>Shopping</h4>
+        <p>AI suggests products you might like.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================== -->
+<!-- 6. ADVANTAGES AND DISADVANTAGES -->
+<!-- ===================================================== -->
+<section id="pros-cons" class="section">
+  <div class="container">
+    <div class="section-head fade-in">
+      <span class="section-tag">05 — Balance</span>
+      <h2 class="section-title">Advantages &amp; Disadvantages</h2>
+      <p class="lead">Like any tool, AI has good sides and bad sides.</p>
+    </div>
+
+    <div class="pros-cons-grid">
+      <div class="pc-column pc-good fade-in">
+        <h3><span class="pc-icon">✅</span> Advantages</h3>
+        <ul>
+          <li>It saves time on boring tasks.</li>
+          <li>It works fast, all day and night.</li>
+          <li>It helps doctors and scientists.</li>
+          <li>It makes fewer small mistakes.</li>
+          <li>It gives people new tools to create.</li>
+        </ul>
+      </div>
+      <div class="pc-column pc-bad fade-in">
+        <h3><span class="pc-icon">❌</span> Disadvantages</h3>
+        <ul>
+          <li>It can take away some jobs.</li>
+          <li>It can share wrong information.</li>
+          <li>It can copy human bias.</li>
+          <li>It raises privacy questions.</li>
+          <li>It needs a lot of energy to run.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================== -->
+<!-- 7. FUN FACTS -->
+<!-- ===================================================== -->
+<section id="facts" class="section section-alt">
+  <div class="container">
+    <div class="section-head fade-in">
+      <span class="section-tag">06 — Did You Know</span>
+      <h2 class="section-title">Facts</h2>
+      <p class="lead">Here are a few facts about AI.</p>
+    </div>
+
+    <div class="card-grid three-col">
+      <div class="fact-card fade-in">
+        <span class="fact-number">01</span>
+        <p>The word "robot" comes from a Czech word meaning "forced labor" <p></p>         forced labor = 'کار اجباری'</p>
+      </p>
+      </div>
+      <div class="fact-card fade-in">
+        <span class="fact-number">02</span>
+        <p>AI can now paint pictures that sell at real art auctions.</p>
+      </div>
+      <div class="fact-card fade-in">
+        <span class="fact-number">03</span>
+        <p>Some AI models learn from billions of pages of text.</p>
+      </div>
+      
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================== -->
+<!-- 8. QUIZ -->
+<!-- ===================================================== -->
+<section id="quiz" class="section">
+  <div class="container container-narrow">
+    <div class="section-head fade-in">
+      <span class="section-tag">07 — Test Yourself</span>
+      <h2 class="section-title">Quick Quiz</h2>
+      <p class="lead">Three questions. Let's see what you remember.</p>
+    </div>
+
+    <div class="quiz-box glass fade-in" id="quizBox">
+
+      <div class="quiz-progress">
+        <div class="quiz-progress-bar" id="quizProgressBar"></div>
+      </div>
+
+      <!-- Question 1 -->
+      <div class="quiz-question active" data-question="1">
+        <p class="quiz-q-title">1. What does "AI" mean?</p>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false">Automatic Internet</button>
+          <button class="quiz-option" data-correct="true">Artificial Intelligence</button>
+          <button class="quiz-option" data-correct="false">Advanced Input</button>
+        </div>
+        <p class="quiz-feedback"></p>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="quiz-question" data-question="2">
+        <p class="quiz-q-title">2. Which computer beat chess champion Garry Kasparov?</p>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false">Siri</button>
+          <button class="quiz-option" data-correct="false">Watson</button>
+          <button class="quiz-option" data-correct="true">Deep Blue</button>
+        </div>
+        <p class="quiz-feedback"></p>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="quiz-question" data-question="3">
+        <p class="quiz-q-title">3. So What do you think about our presentation?</p>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="true">Absolutely the best!🌟 </button>
+          <button class="quiz-option" data-correct="true">10 out of 10 💯</button>
+          <button class="quiz-option" data-correct="true">Amazing work! </button>
+        </div>
+        <p class="quiz-feedback"></p>
+      </div>
+
+      <!-- Result -->
+      <div class="quiz-result" id="quizResult">
+        <div class="quiz-result-score" id="quizScore">0/3</div>
+        <p id="quizResultText">افرین!</p>
+        <button class="btn-secondary" id="quizRestart">Try Again</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================== -->
+<!-- 9. CONCLUSION -->
+<!-- ===================================================== -->
+<section id="conclusion" class="section section-conclusion">
+  <div class="container fade-in">
+    <span class="section-tag">08 — Summary</span>
+    <h2 class="section-title">The Future is Here</h2>
+   <p class="lead conclusion-text">
+  Artificial Intelligence has grown from a simple idea in 1956 into a technology that is part of our daily lives.
+  It helps us work, learn, communicate, and create new ideas.
+  At the same time, it brings challenges such as privacy and job changes.
+  AI will continue to improve, so learning about it today will help us in the future.
+</p>
+  </div>
+</section>
+
+<!-- ===================================================== -->
+<!-- 10. FOOTER -->
+<!-- ===================================================== -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <span class="footer-title">Artificial Intelligence</span>
+   <p>Designed & Developed by Shayan · Presented with Amir</p>
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 20V4m0 0l-6 6m6-6l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
