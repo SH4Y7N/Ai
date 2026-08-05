@@ -223,10 +223,7 @@ function initQuiz() {
     progressBar.style.width = '100%';
     scoreEl.textContent = `${score}/${questions.length}`;
 
-    let message = 'Nice try! Review the topics and try again.';
-    if (score === questions.length) message = 'Perfect score! You know your AI facts.';
-    else if (score >= questions.length / 2) message = 'Good job! You know AI pretty well.';
-    resultTextEl.textContent = message;
+    resultTextEl.textContent = ";
   }
 
   questions.forEach((question) => {
@@ -241,12 +238,12 @@ function initQuiz() {
         const isCorrect = option.getAttribute('data-correct') === 'true';
         if (isCorrect) {
           option.classList.add('correct');
-          feedback.textContent = 'Correct! Well done.';
+          feedback.textContent = 'Correct!';
           feedback.style.color = 'var(--good)';
           score++;
         } else {
           option.classList.add('wrong');
-          feedback.textContent = 'Not quite. The correct answer is highlighted.';
+          feedback.textContent = 'wrongg.';
           feedback.style.color = 'var(--bad)';
           options.forEach(o => {
             if (o.getAttribute('data-correct') === 'true') o.classList.add('correct');
