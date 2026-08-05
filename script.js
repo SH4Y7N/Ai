@@ -223,7 +223,7 @@ function initQuiz() {
     progressBar.style.width = '100%';
     scoreEl.textContent = `${score}/${questions.length}`;
 
-    resultTextEl.textContent = ";
+    resultTextEl.textContent = "";
   }
 
   questions.forEach((question) => {
